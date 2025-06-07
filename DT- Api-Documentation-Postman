@@ -1,0 +1,529 @@
+{
+	"info": {
+		"_postman_id": "b77557f4-efb8-4fe1-8881-7cabdbed4614",
+		"name": "DTT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "228723"
+	},
+	"item": [
+		{
+			"name": "login Post Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_name",
+							"value": "aaa",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/login?user_name&password",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "user_name",
+							"value": null
+						},
+						{
+							"key": "password",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User Post Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "zahid@zahid.com",
+							"type": "text"
+						},
+						{
+							"key": "user_name",
+							"value": "zahidislam08",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Location Post Api",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{bearer}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "city",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "this is test",
+							"type": "text"
+						},
+						{
+							"key": "zip_code",
+							"value": "sasa",
+							"type": "text"
+						},
+						{
+							"key": "phone_no",
+							"value": "5656565",
+							"type": "text"
+						},
+						{
+							"key": "country_code",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/add-location",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"add-location"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Facility Post Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Catring",
+							"type": "text"
+						},
+						{
+							"key": "location_id",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/add-facility",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"add-facility"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Facility Post Tag Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "facilityId",
+							"value": "13",
+							"type": "text"
+						},
+						{
+							"key": "tags[]",
+							"value": "Deventor",
+							"type": "text"
+						},
+						{
+							"key": "tags[]",
+							"value": "ad",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "tags[]",
+							"value": "aaad",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "tags[]",
+							"value": "testing",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "tags[]",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/add-facility-tags",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"add-facility-tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Facility Data Single and All",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NDkzMDM2NTEsImV4cCI6MTc0OTM5MDA1MSwic3ViIjo4fQ.6CuudbAtoVALLmAMX1AID9-Nl_qXgJFLjLKI1WOe1Es",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{url}}/get-facility-data",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"get-facility-data"
+					],
+					"query": [
+						{
+							"key": "facilityId",
+							"value": "6",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Facility Tags Post Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "facilityId",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "tags[]",
+							"value": "dsfsdfsdf",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/add-facility-tags",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"add-facility-tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Facility Tags Post Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "facilityId",
+							"value": "13",
+							"type": "text"
+						},
+						{
+							"key": "location_id",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "tags[]",
+							"value": "Water",
+							"type": "text"
+						},
+						{
+							"key": "tags[]",
+							"value": "i likte",
+							"type": "text"
+						},
+						{
+							"key": "tags[]",
+							"value": "klk",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Denhag",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/update-facility-tags",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"update-facility-tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Facility Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "location_id",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "zahid",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/web_backend_test_catering_api/add-facility",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"web_backend_test_catering_api",
+						"add-facility"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Search implement Get Api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/filter?q=Den",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"filter"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Den"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Facility Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "facilityId",
+							"value": "14",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/delete-facility",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"delete-facility"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "jwt",
+		"jwt": [
+			{
+				"key": "secret",
+				"value": "{{secret}}",
+				"type": "string"
+			},
+			{
+				"key": "algorithm",
+				"value": "HS256",
+				"type": "string"
+			},
+			{
+				"key": "isSecretBase64Encoded",
+				"value": false,
+				"type": "boolean"
+			},
+			{
+				"key": "payload",
+				"value": "{}",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "headerPrefix",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "queryParamKey",
+				"value": "token",
+				"type": "string"
+			},
+			{
+				"key": "header",
+				"value": "{}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost/web_backend_test_catering_api",
+			"type": "string"
+		},
+		{
+			"key": "secret",
+			"value": "ofWcar+QaUfvQI03hA3zBLVa8ADvdx9MT9GrmBlJWCg=",
+			"type": "string"
+		}
+	]
+}
